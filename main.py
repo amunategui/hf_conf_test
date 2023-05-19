@@ -18,6 +18,11 @@ class HF_Convo_Item(BaseModel):
         
 @app.post("/conversation/")
 async def read_item(payload: HF_Convo_Item):
+ 
+#     a_list = [1,2,3]
+     
+#     everything = {"a_list": a_list, "a_dict": a_dict}
+#     json.dumps(everything)
   
      
     # Access individual fields of the JSON payload
@@ -39,7 +44,7 @@ async def read_item(payload: HF_Convo_Item):
     # Repack the payload
     payload = {
         "response": result,
-        "chat_history": chat_history,
+        
     }
 
     return payload
