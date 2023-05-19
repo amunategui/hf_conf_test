@@ -19,6 +19,11 @@ class HF_Convo_Item(BaseModel):
 @app.post("/conversation/")
 async def read_item(payload: HF_Convo_Item):
  
+ 
+# "chat_history":[["this is my question","this is my answer"]], "script_name":"hf_intro", "page_number":1}' https://hf-confo-test.onrender.com/conversation/
+  
+  
+ 
 #     a_list = [1,2,3]
      
 #     everything = {"a_list": a_list, "a_dict": a_dict}
@@ -30,6 +35,7 @@ async def read_item(payload: HF_Convo_Item):
     print(prompt)
     
     chat_history = payload.chat_history
+    chat_history = [str(tuple(inner_list)) for inner_list in chat_history]
     print(chat_history)
       
     script = payload.script_name
