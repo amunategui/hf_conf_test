@@ -35,7 +35,7 @@ async def read_item(payload: HF_Convo_Item):
     print(prompt)
     
     chat_history = payload.chat_history
-    chat_history = [str(tuple(inner_list)) for inner_list in chat_history]
+    chat_history = [tuple(inner_list) for inner_list in chat_history]
     print(chat_history)
       
     script = payload.script_name
