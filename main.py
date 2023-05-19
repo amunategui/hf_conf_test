@@ -32,10 +32,10 @@ async def read_item(payload: HF_Convo_Item):
     chat_history = payload.chat_history
     print(chat_history)
       
-    script = payload.script
+    script = payload.script_name
     print(script)
       
-    page = payload.page
+    page = payload.page_number
     print(page)
     
     result = 'the resulto'
