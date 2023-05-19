@@ -39,11 +39,12 @@ async def read_item(payload: HF_Convo_Item):
     print(page)
     
     result = 'the resulto'
-    chat_history = []
+    chat_history = [4,3,2]
     
     # Repack the payload
     payload = {
         "response": result,
+        "chat_history": chat_history
         
     }
 
